@@ -1,0 +1,114 @@
+problem：多个词匹配到多个aspect词典（多对多问题）
+所以后排舒适度不错
+aspectCategory:	舒适度
+aspectWord:	舒适度
+review:	不错
+reviewPolarity:	1
+aspectCategory:	空间
+aspectWord:	后排
+review:	null
+reviewPolarity:	0
+
+problem：aspect词典描述不准确
+反倒是起到了提升了整车档次的作用
+aspectCategory:	外观
+aspectWord:	档次
+review:	提升
+reviewPolarity:	1
+aspectCategory:	内饰
+aspectWord:	档次
+review:	null
+reviewPolarity:	0
+
+《福特中型suv谍照曝光》新车外观较现款车型有较大改变
+aspectCategory:	外观
+aspectWord:	外观
+review:	较大改变
+reviewPolarity:	1
+aspectCategory:	外观
+aspectWord:	车外观
+review:	null
+reviewPolarity:	0
+
+这个车子的性价比在做了比较之后觉得还是挺好的。
+aspectCategory:	性价比
+aspectWord:	性价比
+review:	挺好
+reviewPolarity:	1
+aspectCategory:	性价比
+aspectWord:	性价比
+review:	null
+reviewPolarity:	0
+
+座里面感觉档次一点也不高
+aspectCategory:	内饰
+aspectWord:	座里面
+review:	不高
+reviewPolarity:	-1
+aspectCategory:	内饰
+aspectWord:	档次
+review:	高
+reviewPolarity:	0
+
+使得全新一代gl8车内的头部空间表现非常优秀
+aspectCategory:	空间
+aspectWord:	头部空间
+review:	非常优秀
+reviewPolarity:	1
+aspectCategory:	外观
+aspectWord:	头部空间
+review:	优秀
+reviewPolarity:	1
+
+顿挫问题主要集中在别克的英朗和君越车型
+aspectCategory:	舒适性
+aspectWord:	顿挫
+review:	问题
+reviewPolarity:	-1
+aspectCategory:	动力
+aspectWord:	顿挫
+review:	集中
+reviewPolarity:	1
+
+没有胎压检测
+aspectCategory:	安全
+aspectWord:	胎压检测
+review:	没有
+reviewPolarity:	-1
+aspectCategory:	安全
+aspectWord:	胎压
+review:	null
+reviewPolarity:	0
+
+//aspect word 抽取错误导致review word错误
+别克凯越1.6排量已改装器手续齐全
+aspectCategory:	售后服务
+aspectWord:	手续
+review:	齐全
+reviewPolarity:	1
+aspectCategory:	动力
+aspectWord:	排量
+review:	null
+reviewPolarity:	0
+
+//主语标注混乱
+座里面感觉档次一点也不高
+aspectCategory:	内饰
+aspectWord:	座里面
+review:	不高
+reviewPolarity:	-1
+aspectCategory:	null
+aspectWord:	座里面
+review:	感觉高
+reviewPolarity:	0
+
+//主语标注混乱
+别克按开锁键倒车灯亮挺好的设计
+aspectCategory:	外观
+aspectWord:	倒车灯
+review:	挺好的
+reviewPolarity:	1
+aspectCategory:	null
+aspectWord:	倒车灯
+review:	亮
+reviewPolarity:	0
