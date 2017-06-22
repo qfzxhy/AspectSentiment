@@ -32,10 +32,10 @@ public class EntityExtractionModel implements Model{
 		trie = new Trie();
 		List<String> entityList = new ArrayList<>();
 		loadCSV(modelPath, entityList);
-		for(String entity:entityList)
-		{
-			System.out.println(entity);
-		}
+//		for(String entity:entityList)
+//		{
+//			System.out.println(entity);
+//		}
 		
 		trie = trie.createTrie(entityList);
 	}

@@ -61,7 +61,7 @@ public class SyntaxBasedTemplate implements Template {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+//空间、安全配置、高科技配置等
 	}
 
 }

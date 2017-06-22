@@ -80,11 +80,12 @@ public class Trie {
 	}
 	private int helper_searchInSentence(char[] charArray, int i, Trie trie) {
 		// TODO Auto-generated method stub
-		char c = charArray[i];
 		if(trie.nodes.containsKey('#'))
 		{
 			return i;
 		}
+		if(i >= charArray.length){return -1;}
+		char c = charArray[i];
 		if(trie.nodes.containsKey(c))
 		{
 			return helper_searchInSentence(charArray, i+1, trie.nodes.get(c));

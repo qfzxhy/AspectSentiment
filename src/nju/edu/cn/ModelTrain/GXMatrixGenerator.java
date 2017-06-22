@@ -38,9 +38,9 @@ class Axis
 }
 public class GXMatrixGenerator {
 	final static String file = "data/entitySeeds";
-	final static int batchSize = 50;
-	final static int thres_countOfNewWords = 10;
-	final static int thres_modification = 20;
+	final static int batchSize = 5000;
+	final static int thres_countOfNewWords = 100;
+	final static int thres_modification = 200;
 	final static int thres_Xrealtion = 5;
 	final static int thres_Yrealtion = 5;
 	List<String> entitySeeds = null;
@@ -151,42 +151,43 @@ public class GXMatrixGenerator {
 					}
 				}
 			}
-			for(String opinion : opinionMap.keySet())
-			{
-				int col = opinionMap.get(opinion);
-				for(PreProcessedItem pitem : pitems)
-				{
-					int tokenId = this.getEntityIdInTokens(pitem.sentence,pitem.words, opinion);
-					if(tokenId == -1){continue;}
-					String entity = posBasedTemplate.extractFromOpinionToAspect(pitem, tokenId);
-					if(entity == null)
-					{
-						entity = syntaxBasedTemplate.extractFromOpinionToAspect(pitem, tokenId);
-					}
-					if(entity != null)
-					{
-						int row = -1;
-						if(entityMap.containsKey(entity))
-						{
-							row = entityMap.get(entity);
-						}else
-						{
-							row = entityMap.size();
-							entityMap.put(entity, row);
-							countOfNewWords++;
-						}
-						Axis axis = new Axis(row, col);
-						if(matrix.containsKey(axis))
-						{
-							matrix.put(axis, matrix.get(axis)+1);
-							modifiction ++;
-						}else
-						{
-							matrix.put(axis, 1);
-						}
-					}
-				}
-			}
+//			for(String opinion : opinionMap.keySet())
+//			{
+//				int col = opinionMap.get(opinion);
+//				for(PreProcessedItem pitem : pitems)
+//				{
+//					int tokenId = this.getEntityIdInTokens(pitem.sentence,pitem.words, opinion);
+//					if(tokenId == -1){continue;}
+//					String entity = posBasedTemplate.extractFromOpinionToAspect(pitem, tokenId);
+//					if(entity == null)
+//					{
+//						entity = syntaxBasedTemplate.extractFromOpinionToAspect(pitem, tokenId);
+//					}
+//					if(entity != null)
+//					{
+//						int row = -1;
+//						if(entityMap.containsKey(entity))
+//						{
+//							row = entityMap.get(entity);
+//						}else
+//						{
+//							row = entityMap.size();
+//							entityMap.put(entity, row);
+//							countOfNewWords++;
+//						}
+//						Axis axis = new Axis(row, col);
+//						if(matrix.containsKey(axis))
+//						{
+//							matrix.put(axis, matrix.get(axis)+1);
+//							modifiction ++;
+//						}else
+//						{
+//							matrix.put(axis, 1);
+//						}
+//					}
+//				}
+//			}
+			break;
 		}
 		
 	}
